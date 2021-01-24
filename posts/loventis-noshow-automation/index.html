@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>게하의 일을 자동화해보았다 | 갈무리곳</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="just blog">
+    
+    <link rel="preload" href="/assets/css/0.styles.2ea99cea.css" as="style"><link rel="preload" href="/assets/js/app.33759e15.js" as="script"><link rel="preload" href="/assets/js/2.c3445015.js" as="script"><link rel="preload" href="/assets/js/7.def8807f.js" as="script"><link rel="prefetch" href="/assets/js/10.69d51e2a.js"><link rel="prefetch" href="/assets/js/11.e7e57f28.js"><link rel="prefetch" href="/assets/js/12.8086ebe0.js"><link rel="prefetch" href="/assets/js/13.9e390a5b.js"><link rel="prefetch" href="/assets/js/14.b5d89d65.js"><link rel="prefetch" href="/assets/js/15.d881ff6e.js"><link rel="prefetch" href="/assets/js/16.da21e0e8.js"><link rel="prefetch" href="/assets/js/17.54888639.js"><link rel="prefetch" href="/assets/js/18.613cb03b.js"><link rel="prefetch" href="/assets/js/19.fb95e50d.js"><link rel="prefetch" href="/assets/js/20.c5333eab.js"><link rel="prefetch" href="/assets/js/3.9a6d3ca9.js"><link rel="prefetch" href="/assets/js/4.b7fce687.js"><link rel="prefetch" href="/assets/js/5.4e60aa7f.js"><link rel="prefetch" href="/assets/js/6.ccc15083.js"><link rel="prefetch" href="/assets/js/8.cf638437.js"><link rel="prefetch" href="/assets/js/9.920c8fa3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2ea99cea.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="mx-auto my-0"><div class="inline-block float-right clearfix mr-4
+    md:mr-24"><ul class="list-none flex flex-row p-0 mt-3
+             xl:flex-col xl:mt-4"><li class="w-16 block bg-white py-2 px-2 mb-2 ml-2
+             text-center text-black
+             overflow-hidden rounded shadow-md"><a href="/posts/" class="router-link-active">Posts</a></li><li class="w-16 block bg-white py-2 px-2 mb-2 ml-2
+             text-center text-black
+             overflow-hidden rounded shadow-md"><a href="/" class="router-link-active">About</a></li></ul></div> <div class="py-16"><div><div class="a4 relative mx-auto shadow-md bg-white antialiased"><h1 class="text-center"> 게하의 일을 자동화해보았다 </h1> <div class="date"> 06/08/2018</div> <div class="content__default"><p>게스트 하우스에서는 매일매일 해야하는 지루한 작업이 몇가지 있다. 아래처럼 클릭, 클릭, 클릭을 반복한다.</p> <p></p><figure><img src="/assets/img/tedius_work.ec1b18a9.gif" alt="노쇼 처리 작업 일부."> <figcaption>노쇼 처리 작업 일부.</figcaption></figure> <p></p> <p>내가 일하는 게스트하우스에서는 예약 관리를 Loventis의 웹앱을 이용해서 한다. 이 웹앱은 왠만해선 페이지가 새로고침 되지 않는 SPA<sup>1</sup>이다. 그러다보니 작업의 일부를 간단한 DOM 제어를 통해 자동화하기 쉽다.</p> <p>처음엔 크롬 개발자 도구가 지원하는 스니펫<sub>snippet</sub>기능을 이용했다. 같이 일하는 스태프에게도 설명 해줄 때 'F12를 누르고 Source 를 누르고 Snippet을 누르고 특정한 스니펫을 고르고 Ctrl+Enter를 누르면 된다'라는 식으로 말했다. 그런데 여기서 마음에 걸렸던 게, 다른 사람에게 가르쳐줄 때 장황하게 설명을 해줘야 하고, 배우는 사람도 새로운 용어를 익혀야 하는 부담이 있었다.</p> <p>어쩌면 내가 잘난 척을 하고 싶었던 걸까? 하는 의문도 생겼다. 크롬 개발자 도구를 모르는 사람에게 어떻게 더 쉽게 사용법을 가르쳐주고, 더 간결한 UX를 줄 수 있을까 고민했고, 나는 크롬 익스텐션<sub>chrome extension</sub>을 만들기로 했다.</p> <p></p><figure><img src="/assets/img/introduce_extension.82580923.jpg" alt="크롬익스텐션을 도입했다.
+가장 왼쪽의 익스텐션이 노쇼처리 자동화 익스텐션이다."> <figcaption>크롬익스텐션을 도입했다.
+가장 왼쪽의 익스텐션이 노쇼처리 자동화 익스텐션이다.</figcaption></figure> <p></p> <p><a href="https://developer.chrome.com/extensions" target="_blank" rel="noopener noreferrer">크롬 공식 사이트<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>를 통해서 익스텐션의 기본 구조를 공부해서 만드느라 시간이 생각보다 오래 걸렸다. 하지만 그럴 가치가 있었고, 함께 지냈던 스태프들과의 추억을 남기며 했기 때문에 즐겁게 일을 할 수 있었다. 아래가 완성된 모습이다.</p> <p></p><figure><img src="/assets/img/noshow_modeon.308bcc3a.gif" alt="노쇼 처리 일부를 자동화한 모습."> <figcaption>노쇼 처리 일부를 자동화한 모습.</figcaption></figure>
+    
+    가장 위의 그림과 정확히 같은 작업을 하는 그림이다. 노쇼 모드를 키고, 노쇼처리 하고 싶은 블록을 클릭만 하면 나머지는 익스텐션이 알아서 해준다.
+    해당 업무를 담당하던 스태프가 업무가 크게 편해졌다고 말해주어 기뻤다. 작은 프로젝트였지만, 이번 기회로 크롬 익스텐션을 이용한 업무 자동화가 JS 사용자로서 업무 공동체에 기여할 수 있는 담백하면서도 효과적인 방법이라는 생각을 할 수 있었다.<p></p> <details><summary>사용한 기술</summary> <p>
+ - Vanila Javascript <br>
+ - Chrome Extension <br>
+ - Materialize 
+</p></details></div></div> <div class="a5-landscape mx-auto my-4 shadow-md bg-white"><div id="disqus_thread"></div></div></div></div> <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet"></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.33759e15.js" defer></script><script src="/assets/js/2.c3445015.js" defer></script><script src="/assets/js/7.def8807f.js" defer></script>
+  </body>
+</html>
