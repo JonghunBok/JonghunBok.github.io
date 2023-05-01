@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as t,a}from"./app.70ff419d.js";const f=JSON.parse('{"title":"갈무리곳","description":"","frontmatter":{"title":"갈무리곳"},"headers":[],"relativePath":"index.md"}'),l={name:"index.md"},n=a("",5),i=[n];function o(_,s,c,p,h,d){return t(),r("div",null,i)}const m=e(l,[["render",o]]);export{f as __pageData,m as default};

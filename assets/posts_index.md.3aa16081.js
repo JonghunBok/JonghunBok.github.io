@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as s}from"./app.70ff419d.js";const m=JSON.parse('{"title":"글","description":"","frontmatter":{"type":"PostsList","title":"글"},"headers":[],"relativePath":"posts/index.md"}'),o={name:"posts/index.md"};function a(n,r,c,i,p,d){return s(),e("div")}const f=t(o,[["render",a]]);export{m as __pageData,f as default};
