@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OAuth 2.0 이해하기 | 갈무리곳</title>
+    <meta name="description" content="just blog">
+    <meta name="generator" content="VitePress v2.0.0-alpha.12">
+    <link rel="preload stylesheet" href="/assets/style.B4_DcqmZ.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    
+    <script type="module" src="/assets/app.DFQ7Pylp.js"></script>
+    <link rel="modulepreload" href="/assets/chunks/theme.kDWXhGo7.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.BuAPHyTs.js">
+    <link rel="modulepreload" href="/assets/drafts_oauth.md.Lvqp9LZg.lean.js">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3HEVLWBHH"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-L3HEVLWBHH");</script>
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="mx-auto my-0"><div class="inline-block float-right clearfix mr-4 md:mr-24"><ul class="list-none flex flex-row p-0 mt-3 xl:flex-col xl:mt-4"><!--[--><li class="shadow-md w-16 block bg-white py-2 px-2 mb-2 ml-2 text-center text-black overflow-hidden rounded"><a class="" href="/posts/">Posts</a></li><li class="shadow-md w-16 block bg-white py-2 px-2 mb-2 ml-2 text-center text-black overflow-hidden rounded"><a class="" href="/">About</a></li><!--]--></ul></div><div class="py-16"><div><div class="a4 relative mx-auto shadow-md bg-white antialiased"><h1 class="text-center">OAuth 2.0 이해하기</h1><!----><div style="position:relative;"><div><h1 id="oauth-2-0-이해하기" tabindex="-1">OAuth 2.0 이해하기 <a class="header-anchor" href="#oauth-2-0-이해하기" aria-label="Permalink to “OAuth 2.0 이해하기”">​</a></h1><h2 id="용어들" tabindex="-1">용어들 <a class="header-anchor" href="#용어들" aria-label="Permalink to “용어들”">​</a></h2><ul><li>Resource Owner</li><li>Resource Server</li><li>Client</li><li>Client ID</li><li>Client Secret</li></ul><h2 id="절차" tabindex="-1">절차 <a class="header-anchor" href="#절차" aria-label="Permalink to “절차”">​</a></h2><ol><li>클라이언트가 리소스 서버에 등록을 한다. &quot;당신네 서비스를 이용하고 싶소&quot;</li><li>리소스 서버가 클라이언트에게 &quot;Client ID&quot;와 &quot;Client Secret&quot;을 발급해준다.</li><li>클라이언트가 리소스 오너에게 리소스 서버에서 어떤 리소스를 쓸 수 있게끔 허락해달라고 요청</li><li>리소스 오너가 리소스 서버에 연결되어 허락</li><li>리소스 서버가 클라이언트에 해당 리소스에 접근을 허가하는 코드 발급</li><li>클라이언트가 &quot;Client ID&quot;, &quot;Client Secret&quot;, 과 코드를 리소스 서버에 보내어 알맞은 요청이라는 걸 증명.</li><li>리소스 서버가 클라이언트에 &quot;Access Token&quot;을 발급</li><li>클라이언트가 &quot;Access Token&quot;을 이용해 리소스 서버로부터 리소스 획득</li></ol></div></div></div><div class="a5-landscape mx-auto my-4 shadow-md bg-white"><div id="disqus_thread"></div></div></div></div><link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&amp;display=swap" rel="stylesheet"></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"drafts_blackboard.md\":\"BC7T6qf4\",\"drafts_buisness.md\":\"beUlALOL\",\"drafts_oauth.md\":\"Lvqp9LZg\",\"drafts_usability-heuristics_index.md\":\"fdcVI9ZQ\",\"drafts_vue-component-test_index.md\":\"CnC8m3_H\",\"drafts_zookeeper.md\":\"YiD78-Rr\",\"index.md\":\"CtPp_QWH\",\"notes_test.md\":\"BfCZeigz\",\"posts_awsmelbourne_index.md\":\"SEI-S9aa\",\"posts_book-a-matter-of-life_index.md\":\"DdYUeLll\",\"posts_dynamic-programming_index.md\":\"B4mZy_ZY\",\"posts_fundamental-principles-of-interaction_index.md\":\"eGDBUcPH\",\"posts_gui-on-container_index.md\":\"BY9Fpwf2\",\"posts_index.md\":\"BOCqctj8\",\"posts_jest-intro_index.md\":\"CVaFWvJ_\",\"posts_linebyline_index.md\":\"BXGS5RHK\",\"posts_loventis-noshow-automation_index.md\":\"Bc948RQ0\",\"posts_modules.md\":\"DPWLtyn-\",\"posts_numbergame-comment-md_index.md\":\"DVxZVbDq\",\"posts_terminal-for-fe_01.md\":\"OCVGrY-r\",\"posts_terminal-for-fe_02.md\":\"BYXxKtsE\",\"posts_translation-lazy-evaluation.md\":\"DQakt3eB\",\"posts_translation-suprise-of-building-ml_index.md\":\"Dm0WPDPA\",\"posts_vagrant_and_ansible_index.md\":\"Bvx5iZmY\",\"posts_vue_directive-is-an-assitent.md\":\"CyCoIiru\",\"readme.md\":\"Dq_64CZM\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"갈무리곳\",\"description\":\"just blog\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"nav\":[{\"text\":\"Posts\",\"link\":\"/posts/\"},{\"text\":\"About\",\"link\":\"/\"}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false,\"additionalConfig\":{}}");</script>
+    
+  </body>
+</html>
