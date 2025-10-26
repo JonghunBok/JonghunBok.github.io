@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n}from"./chunks/framework.BuAPHyTs.js";const m=JSON.parse('{"title":"쪽글","description":"","frontmatter":{"type":"NoteList","title":"쪽글"},"headers":[],"relativePath":"notes/index.md","filePath":"notes/index.md"}'),o={name:"notes/index.md"};function a(s,r,i,c,d,p){return n(),t("div")}const f=e(o,[["render",a]]);export{m as __pageData,f as default};
